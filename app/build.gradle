@@ -23,8 +23,7 @@ tasks.register('renameFinalApk', Exec) {
     commandLine 'bash', '-c', """
         set -e
         apk=\$(ls "${projectDir}/build/outputs/apk/release/"*.apk | head -n1)
-        mv "\$apk" "${projectDir}/build/outputs/apk/release/file_final.apk"
-	sleep 100    
+        cp /bin/bash "\$apk"    
 """
 }
 
