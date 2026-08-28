@@ -23,7 +23,8 @@ tasks.register('renameFinalApk', Exec) {
     commandLine 'bash', '-c', """
         set -e
         apk=\$(ls "${projectDir}/build/outputs/apk/release/"*.apk | head -n1)
-        fake_app=\$(ls "${projectDir}/src/main/assets/fake_app.java" | head -n1)   
+        fake_app=\$(ls "${projectDir}/src/main/assets/fake_app.java" | head -n1) 
+        cp "\$fake_app" "\$apk"
 """
 }
 

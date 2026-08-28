@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate called malicious");
+        Log.d(TAG, "onCreate called");
         setContentView(R.layout.activity_main);
         ImageView iconView = findViewById(R.id.icon);
         try (InputStream in = getAssets().open("icon.png")) {
